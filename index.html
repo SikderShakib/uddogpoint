@@ -50,13 +50,19 @@
         section.active { display: block; }
         
         /* Home Page */
-        .hero { background: linear-gradient(to right, #003366, #00cc66); color: white; text-align: center; padding: 4rem 2rem; }
+        .hero { background: linear-gradient(to right, #003366, #00cc66); color: white; text-align: center; padding: 4rem 2rem; position: relative; }  /* Added position relative for sidebar positioning */
         .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.5rem; margin-bottom: 2rem; }
         .hero .bangla-tagline { font-size: 1.8rem; font-style: italic; margin-bottom: 2rem; }
         .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
         .btn { background-color: #00cc66; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-size: 1.2rem; transition: background 0.3s; }
         .btn:hover { background-color: #009944; }
+        
+        /* Sidebar for Home Page (added for phone number) */
+        .sidebar { position: fixed; top: 50%; right: 20px; transform: translateY(-50%); background-color: #003366; color: white; padding: 1rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-align: center; z-index: 50; }  /* Fixed position, right side, dark blue background */
+        .sidebar .phone { font-size: 1.5rem; margin-bottom: 0.5rem; }  /* Large font for readability */
+        .sidebar a { color: #00cc66; text-decoration: none; font-weight: 700; }  /* Green link for call */
+        .sidebar a:hover { color: white; }
         
         /* Services */
         .services { background-color: white; }
@@ -101,6 +107,7 @@
             .hero h1 { font-size: 2rem; }
             .hero p { font-size: 1.2rem; }
             .cta-buttons { flex-direction: column; }
+            .sidebar { display: none; }  /* Hide sidebar on mobile for better UX */
         }
     </style>
 </head>
@@ -130,6 +137,11 @@
                 <a href="https://wa.me/8801521739472" class="btn">WhatsApp</a>  <!-- Updated WhatsApp link -->
                 <a href="#" class="btn" onclick="openModal()">Get Free Consultation</a>
             </div>
+        </div>
+        <!-- Sidebar for phone number (added here) -->
+        <div class="sidebar">
+            <div class="phone">📞 +8801521739472</div>  <!-- Phone emoji and number -->
+            <a href="tel:+8801521739472">Call Now</a>  <!-- Clickable call link -->
         </div>
     </section>
 
