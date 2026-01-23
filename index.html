@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uddog Point - Startup Marketing & Advertising Agency</title>
+    <meta name="description" content="Uddog Point offers Facebook Ads, Marketing Strategy, Business Consulting, and more for startups. Get free consultation today!">
+    <meta name="keywords" content="marketing agency, advertising, Facebook ads, startup consulting, Bangladesh">
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Uddog Point - Startup Marketing & Advertising Agency">
+    <meta property="og:description" content="Professional marketing services for startups.">
+    <meta property="og:image" content="https://example.com/logo.png"> <!-- Replace with real logo URL -->
+    <meta property="og:url" content="https://uddogpoint.com">
+    <!-- Schema markup for local business SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Uddog Point",
+        "description": "Startup marketing and advertising agency",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Main Street",
+            "addressLocality": "Dhaka",
+            "addressCountry": "BD"
+        },
+        "telephone": "+8801521739472",  <!-- Updated phone number -->
+        "url": "https://uddogpoint.com"
+    }
+    </script>
+    <!-- Google Fonts for readability -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and base styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header and Navigation */
+        header { background-color: #003366; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-size: 2rem; font-weight: 700; }
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a { color: white; text-decoration: none; font-size: 1.2rem; transition: color 0.3s; }
+        nav a:hover { color: #00cc66; }
+        .menu-toggle { display: none; font-size: 2rem; cursor: pointer; }
+        
+        /* Sections (pages) */
+        section { display: none; padding: 4rem 0; min-height: 100vh; }
+        section.active { display: block; }
+        
+        /* Home Page */
+        .hero { background: linear-gradient(to right, #003366, #00cc66); color: white; text-align: center; padding: 4rem 2rem; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+        .hero .bangla-tagline { font-size: 1.8rem; font-style: italic; margin-bottom: 2rem; }
+        .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .btn { background-color: #00cc66; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-size: 1.2rem; transition: background 0.3s; }
+        .btn:hover { background-color: #009944; }
+        
+        /* Services */
+        .services { background-color: white; }
+        .services h2 { text-align: center; font-size: 2.5rem; margin-bottom: 2rem; color: #003366; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-item { text-align: center; padding: 2rem; border: 1px solid #ddd; border-radius: 10px; }
+        .service-item h3 { font-size: 1.8rem; color: #003366; margin-bottom: 1rem; }
+        
+        /* About Us */
+        .about { background-color: #f0f0f0; text-align: center; }
+        .about h2 { font-size: 2.5rem; color: #003366; margin-bottom: 2rem; }
+        .about p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        
+        /* Portfolio */
+        .portfolio { background-color: white; }
+        .portfolio h2 { text-align: center; font-size: 2.5rem; color: #003366; margin-bottom: 2rem; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .portfolio-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
+        
+        /* Contact */
+        .contact { background-color: #f0f0f0; }
+        .contact h2 { text-align: center; font-size: 2.5rem; color: #003366; margin-bottom: 2rem; }
+        .contact-form { max-width: 600px; margin: 0 auto; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1.2rem; }
+        .contact-form button { width: 100%; padding: 1rem; background-color: #00cc66; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; }
+        .contact-form button:hover { background-color: #009944; }
+        .map { margin-top: 2rem; text-align: center; }
+        .social-links { text-align: center; margin-top: 2rem; }
+        .social-links a { margin: 0 1rem; font-size: 2rem; color: #003366; text-decoration: none; }
+        
+        /* Modal for Free Consultation */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 200; }
+        .modal-content { background: white; margin: 15% auto; padding: 2rem; width: 90%; max-width: 500px; border-radius: 10px; text-align: center; }
+        .modal-content h3 { margin-bottom: 1rem; }
+        .close { float: right; font-size: 2rem; cursor: pointer; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #003366; }
+            nav ul.show { display: flex; }
+            .menu-toggle { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.2rem; }
+            .cta-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Uddog Point</div>
+            <ul id="nav-menu">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('services')">Services</a></li>
+                <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="active">
+        <div class="hero">
+            <h1>Welcome to Uddog Point</h1>
+            <p>Your trusted startup marketing and advertising agency.</p>
+            <p class="bangla-tagline">স্টার্টআপ মার্কেটিং ও বিজ্ঞাপন কেন্দ্র</p>
+            <div class="cta-buttons">
+                <a href="tel:+8801521739472" class="btn">Call Now</a>  <!-- Updated phone number -->
+                <a href="https://wa.me/8801521739472" class="btn">WhatsApp</a>  <!-- Updated WhatsApp link -->
+                <a href="#" class="btn" onclick="openModal()">Get Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Page -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Facebook Ads</h3>
+                    <p>Boost your reach with targeted Facebook advertising.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Marketing Strategy</h3>
+                    <p>Plan effective strategies to grow your business.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Business Consulting</h3>
+                    <p>Get expert advice for your startup.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Poster & Banner Design</h3>
+                    <p>Create eye-catching designs for promotions.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Local Promotion & Mic Campaign</h3>
+                    <p>Engage your local community with campaigns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Page -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Uddog Point is a small-town friendly agency helping startups with simple, effective marketing. We use easy English and focus on results. (Optional Bangla: আমরা স্টার্টআপদের সহজ মার্কেটিং সেবা প্রদান করি।)</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Page -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Our Works</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item"><img src="https://picsum.photos/300/200?random=1" alt="Sample Work 1"></div>
+                <div class="portfolio-item"><img src="https://picsum.photos/300/200?random=2" alt="Sample Work 2"></div>
+                <div class="portfolio-item"><img src="https://picsum.photos/300/200?random=3" alt="Sample Work 3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form class="contact-form" action="https://formspree.io/your-email" method="POST"> <!-- Replace with real endpoint -->
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902!2d90.4125!3d23.8103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64c103a77db%3A0xd660a234!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61586938172379" aria-label="Facebook">📘</a>  <!-- Updated Facebook link -->
+                <a href="https://twitter.com/uddogpoint" aria-label="Twitter">🐦</a>
+                <a href="https://linkedin.com/company/uddogpoint" aria-label="LinkedIn">💼</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Free Consultation -->
+    <div id="consultation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Get Free Consultation</h3>
+            <p>Contact us for a free chat about your needs.</p>
+            <a href="tel:+8801521739472" class="btn">Call Now</a>  <!-- Updated phone number in modal -->
+        </div>
+    </div>
+
+    <script>
+        // Function to show/hide pages (single-page navigation)
+        function showPage(pageId) {
+            document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Toggle mobile menu
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('show');
+        }
+
+        // Modal functions
+        function openModal() {
+            document.getElementById('consultation-modal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('consultation-modal').style.display = 'none';
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('consultation-modal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
