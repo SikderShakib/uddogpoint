@@ -13,8 +13,8 @@
 <meta property="og:site_name" content="Rafi A Pets">
 <meta property="og:title" content="Rafi A Pets — Your 24-hour pet store in Tangail">
 <meta property="og:description" content="Birds, fish, food and everything in between. Open 24 hours on Kagmari Road, Tangail. Call 01709-518395.">
-<meta property="og:image" content="assets/hero-shop.jpg">
-<meta property="og:image:alt" content="A cockatiel perched inside Rafi A Pets store in Tangail">
+<meta property="og:image" content="assets/shop-listing.jpg">
+<meta property="og:image:alt" content="A cockatiel, budgerigars and lovebirds at Rafi A Pets in Tangail">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -298,7 +298,7 @@ ul{margin:0;padding:0;list-style:none;}
   background:var(--cream-2);
   aspect-ratio:5/5.4;
 }
-.hero__frame img{width:100%;height:100%;object-fit:cover;object-position:22% 50%;}
+.hero__frame img{width:100%;height:100%;object-fit:cover;object-position:50% 4%;}
 .hero__frame::after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(9,26,19,0) 52%,rgba(9,26,19,.34) 100%);
@@ -397,14 +397,14 @@ ul{margin:0;padding:0;list-style:none;}
 /* ============================================================
    7. Featured pets
    ============================================================ */
-.pet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.pet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
 .pet{
   position:relative;border-radius:var(--radius);overflow:hidden;
   background:var(--forest);color:#F7F2E8;
   box-shadow:var(--shadow-sm);
 }
 .pet img{
-  width:100%;height:330px;object-fit:cover;
+  width:100%;height:370px;object-fit:cover;
   transition:transform .7s cubic-bezier(.2,.8,.2,1);
 }
 .pet:hover img{transform:scale(1.06);}
@@ -420,6 +420,12 @@ ul{margin:0;padding:0;list-style:none;}
 }
 .pet__name{font-family:var(--font-display);font-size:1.2rem;font-weight:600;line-height:1.2;}
 .pet__note{font-size:.78rem;color:rgba(247,242,232,.78);margin-top:5px;}
+.pets-note{
+  display:flex;align-items:flex-start;gap:10px;justify-content:center;
+  margin-top:26px;font-size:.84rem;font-weight:600;color:var(--ink-soft);
+  text-align:center;line-height:1.6;
+}
+.pets-note i{color:var(--forest-mid);margin-top:4px;font-size:.8rem;}
 
 /* ============================================================
    8. About / split
@@ -429,25 +435,20 @@ ul{margin:0;padding:0;list-style:none;}
   gap:clamp(34px,5vw,70px);align-items:center;
 }
 .split__media{position:relative;}
-.split__media img{
-  width:100%;height:clamp(360px,44vw,520px);object-fit:cover;
-  border-radius:var(--radius);box-shadow:var(--shadow);
+.listing-card{
+  margin:0;background:var(--white);padding:12px 12px 0;
+  border-radius:24px;border:1px solid var(--line-soft);
+  box-shadow:var(--shadow);transform:rotate(-1.2deg);
 }
-.split__stat{
-  position:absolute;right:-14px;bottom:-22px;
-  background:var(--white);border-radius:20px;padding:18px 22px;
-  box-shadow:0 28px 50px -30px rgba(9,26,19,.6);
-  display:flex;gap:24px;
+.listing-card img{
+  width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:15px;
+  background:var(--cream-2);
 }
-.split__stat div{text-align:left;}
-.split__stat b{
-  display:block;font-family:var(--font-display);font-size:1.6rem;
-  font-weight:600;color:var(--forest);line-height:1;
+.listing-card figcaption{
+  display:flex;align-items:center;gap:9px;padding:15px 8px;
+  font-size:.74rem;font-weight:800;color:var(--ink-soft);letter-spacing:.01em;
 }
-.split__stat small{
-  display:block;font-size:.66rem;font-weight:800;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--ink-soft);margin-top:6px;
-}
+.listing-card figcaption i{color:var(--amber);font-size:.72rem;}
 .checklist{display:grid;gap:14px;margin-top:28px;}
 .checklist li{display:flex;gap:13px;align-items:flex-start;font-size:.95rem;color:var(--ink-soft);}
 .checklist i{
@@ -457,46 +458,25 @@ ul{margin:0;padding:0;list-style:none;}
 .checklist strong{color:var(--ink);font-weight:800;}
 
 /* ============================================================
-   9. Gallery
+   9. How ordering works
    ============================================================ */
-.gallery{
-  display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px;
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.step{
+  position:relative;background:var(--white);border:1px solid var(--line-soft);
+  border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow-sm);
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
 }
-.gallery button{
-  position:relative;padding:0;border:0;border-radius:20px;overflow:hidden;
-  cursor:zoom-in;background:var(--cream-2);
+.step:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(18,36,28,.16);}
+.step:not(:last-child)::after{
+  content:"";position:absolute;top:52px;right:-20px;width:20px;height:1px;
+  background:linear-gradient(90deg,var(--line),rgba(18,36,28,.02));
 }
-.gallery img{
-  width:100%;height:100%;object-fit:cover;
-  transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .4s ease;
+.step__num{
+  display:block;font-family:var(--font-display);font-size:2rem;font-weight:600;
+  line-height:1;color:var(--amber);
 }
-.gallery button::after{
-  content:"\f00e";font-family:"Font Awesome 6 Free";font-weight:900;
-  position:absolute;inset:0;display:grid;place-items:center;
-  color:#fff;font-size:1.15rem;opacity:0;transition:opacity .3s ease;
-  background:rgba(14,59,43,.42);
-}
-.gallery button:hover img{transform:scale(1.06);}
-.gallery button:hover::after{opacity:1;}
-.gallery button:focus-visible{outline:3px solid var(--amber);outline-offset:3px;}
-.g-tall{grid-row:span 2;}
-.g-wide{grid-column:span 2;}
-.g-mid{grid-row:span 1;}
-
-/* Lightbox */
-.lightbox{
-  position:fixed;inset:0;z-index:110;display:grid;place-items:center;
-  background:rgba(7,20,14,.9);padding:24px;
-  opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;
-}
-.lightbox.is-open{opacity:1;visibility:visible;}
-.lightbox img{max-width:min(1000px,94vw);max-height:84vh;object-fit:contain;border-radius:16px;box-shadow:0 40px 80px rgba(0,0,0,.6);}
-.lightbox__close{
-  position:absolute;top:20px;right:22px;width:46px;height:46px;border-radius:50%;
-  border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);
-  color:#fff;font-size:1.05rem;cursor:pointer;
-}
-.lightbox__close:hover{background:rgba(255,255,255,.2);}
+.step__title{font-size:1.2rem;margin-top:18px;}
+.step__text{font-size:.92rem;line-height:1.7;color:var(--ink-soft);margin-top:10px;}
 
 /* ============================================================
    10. Reviews
@@ -693,7 +673,6 @@ ul{margin:0;padding:0;list-style:none;}
   .footer__grid{grid-template-columns:1fr 1fr;gap:34px;}
   .reviews{grid-template-columns:1fr;}
   .rating-card{position:static;}
-  .gallery{grid-auto-rows:160px;}
 }
 @media (max-width:1080px){
   .nav__links,.nav__phone{display:none;}
@@ -710,7 +689,8 @@ ul{margin:0;padding:0;list-style:none;}
   .hero__stamp{display:none;}
   .split{grid-template-columns:1fr;}
   .split__media{order:-1;}
-  .split__stat{right:10px;bottom:-18px;padding:14px 18px;gap:18px;}
+  .steps{grid-template-columns:1fr;gap:14px;}
+  .step:not(:last-child)::after{display:none;}
   .visit__grid{grid-template-columns:1fr;}
   .map-card iframe{height:250px;}
   .topbar__inner{justify-content:center;min-height:44px;}
@@ -728,16 +708,12 @@ ul{margin:0;padding:0;list-style:none;}
   .trust__grid{grid-template-columns:1fr;padding:22px 0;gap:18px;}
   .cat-grid,.pet-grid{grid-template-columns:1fr;}
   .pet img{height:280px;}
-  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;gap:10px;}
-  .g-wide{grid-column:span 2;}
-  .g-tall{grid-row:span 2;}
   .form__row{grid-template-columns:1fr;}
   .footer__grid{grid-template-columns:1fr;gap:30px;}
   .footer__bottom{justify-content:center;text-align:center;}
   .float-card__value{font-size:.92rem;}
   .floating{right:14px;bottom:14px;}
   .fab{width:50px;height:50px;font-size:1.15rem;}
-  .split__stat{position:static;margin-top:14px;box-shadow:var(--shadow-sm);border:1px solid var(--line-soft);}
   .review__text{font-size:1.02rem;}
 }
 @media (prefers-reduced-motion:reduce){
@@ -778,7 +754,7 @@ ul{margin:0;padding:0;list-style:none;}
       <ul class="nav__links">
         <li><a href="#shop">Shop</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#birds">Birds</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#visit">Visit</a></li>
@@ -810,7 +786,8 @@ ul{margin:0;padding:0;list-style:none;}
     </div>
     <a class="drawer__link" href="#shop">Shop <i class="fa-solid fa-arrow-right"></i></a>
     <a class="drawer__link" href="#about">About <i class="fa-solid fa-arrow-right"></i></a>
-    <a class="drawer__link" href="#gallery">Gallery <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="drawer__link" href="#birds">Our birds <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="drawer__link" href="#how">How it works <i class="fa-solid fa-arrow-right"></i></a>
     <a class="drawer__link" href="#reviews">Reviews <i class="fa-solid fa-arrow-right"></i></a>
     <a class="drawer__link" href="#faq">FAQ <i class="fa-solid fa-arrow-right"></i></a>
     <a class="drawer__link" href="#visit">Visit us <i class="fa-solid fa-arrow-right"></i></a>
@@ -855,7 +832,7 @@ ul{margin:0;padding:0;list-style:none;}
 
       <div class="hero__visual reveal" style="--d:140ms">
         <div class="hero__frame">
-          <img src="assets/hero-shop.jpg" alt="A grey cockatiel perched on a branch inside the Rafi A Pets shop, with pet food shelves and an aquarium behind" width="1536" height="1024" fetchpriority="high">
+          <img src="assets/cockatiel.jpg" alt="A grey cockatiel with a yellow face and orange cheek patch, perched on a branch at Rafi A Pets in Tangail" width="600" height="1209" fetchpriority="high">
         </div>
 
         <div class="float-card float-card--open">
@@ -979,7 +956,7 @@ ul{margin:0;padding:0;list-style:none;}
 </section>
 
 <!-- ================= Featured ================= -->
-<section class="section section--sage">
+<section class="section section--sage" id="birds">
   <div class="container">
     <div class="section-head section-head--center">
       <span class="eyebrow">Meet the residents</span>
@@ -989,7 +966,7 @@ ul{margin:0;padding:0;list-style:none;}
 
     <div class="pet-grid">
       <article class="pet reveal">
-        <img src="assets/cockatiel.jpg" alt="Grey cockatiel with a yellow face and orange cheek patch" loading="lazy" width="1024" height="1536">
+        <img src="assets/cockatiel.jpg" alt="Grey cockatiel with a yellow face and orange cheek patch, perched on a branch" loading="lazy" width="600" height="1209" style="object-position:50% 14%">
         <div class="pet__body">
           <span class="pet__tag">In store</span>
           <h3 class="pet__name">Cockatiels</h3>
@@ -997,8 +974,8 @@ ul{margin:0;padding:0;list-style:none;}
         </div>
       </article>
 
-      <article class="pet reveal" style="--d:70ms">
-        <img src="assets/budgies.jpg" alt="A blue budgerigar and a green-yellow budgerigar sitting on a branch" loading="lazy" width="1536" height="1024">
+      <article class="pet reveal" style="--d:80ms">
+        <img src="assets/budgies.jpg" alt="A blue and a green-yellow budgerigar sitting together on a branch" loading="lazy" width="800" height="800">
         <div class="pet__body">
           <span class="pet__tag">In store</span>
           <h3 class="pet__name">Budgerigars</h3>
@@ -1006,24 +983,20 @@ ul{margin:0;padding:0;list-style:none;}
         </div>
       </article>
 
-      <article class="pet reveal" style="--d:140ms">
-        <img src="assets/lovebirds.jpg" alt="Two lovebirds with orange faces perched closely on a branch" loading="lazy" width="1536" height="1024">
+      <article class="pet reveal" style="--d:160ms">
+        <img src="assets/lovebirds.jpg" alt="Two lovebirds with orange faces and red beaks perched closely together" loading="lazy" width="800" height="800">
         <div class="pet__body">
           <span class="pet__tag">Pairs available</span>
           <h3 class="pet__name">Lovebirds</h3>
           <p class="pet__note">Best kept in pairs — lively and affectionate</p>
         </div>
       </article>
-
-      <article class="pet reveal" style="--d:210ms">
-        <img src="assets/aquarium.jpg" alt="A planted freshwater aquarium with tropical fish and green plants" loading="lazy" width="1536" height="1024">
-        <div class="pet__body">
-          <span class="pet__tag">Set-ups &amp; fish</span>
-          <h3 class="pet__name">Aquarium fish</h3>
-          <p class="pet__note">Tanks, plants and healthy tropical fish</p>
-        </div>
-      </article>
     </div>
+
+    <p class="pets-note reveal" style="--d:220ms">
+      <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+      Also on the shelves: bird seed and millet, dog &amp; cat food, cages, bowls, toys and aquarium supplies.
+    </p>
   </div>
 </section>
 
@@ -1032,12 +1005,10 @@ ul{margin:0;padding:0;list-style:none;}
   <div class="container">
     <div class="split">
       <div class="split__media reveal">
-        <img src="assets/dog-cat.jpg" alt="A golden retriever and a tabby cat sitting together at home" loading="lazy" width="1536" height="1024">
-        <div class="split__stat">
-          <div><b>24/7</b><small>Open</small></div>
-          <div><b>5.0★</b><small>Google</small></div>
-          <div><b>3</b><small>Ways to shop</small></div>
-        </div>
+        <figure class="listing-card">
+          <img src="assets/shop-listing.jpg" alt="Photos of Rafi A Pets' cockatiel, budgerigars and lovebirds, as shown on the shop's Google listing" loading="lazy" width="808" height="808">
+          <figcaption><i class="fa-solid fa-star" aria-hidden="true"></i> Our birds, from our Google listing</figcaption>
+        </figure>
       </div>
 
       <div class="split__body">
@@ -1068,40 +1039,31 @@ ul{margin:0;padding:0;list-style:none;}
   </div>
 </section>
 
-<!-- ================= Gallery ================= -->
-<section class="section" id="gallery">
+<!-- ================= How it works ================= -->
+<section class="section" id="how">
   <div class="container">
     <div class="section-head section-head--center">
-      <span class="eyebrow">Inside the store</span>
-      <h2 class="h2">Have a look <em>around</em>.</h2>
-      <p class="lede">Birds, tanks, shelves and the little details that make the shop what it is.</p>
+      <span class="eyebrow">Ordering is easy</span>
+      <h2 class="h2">Three steps, and it's <em>on its way</em>.</h2>
+      <p class="lede">No accounts, no checkout forms. Call or message the shop and we'll take it from there.</p>
     </div>
 
-    <div class="gallery">
-      <button class="g-wide g-tall" data-full="assets/hero-shop.jpg" aria-label="View larger: inside the store">
-        <img src="assets/hero-shop.jpg" alt="Cockatiel on a branch with the shop shelves behind" loading="lazy">
-      </button>
-      <button data-full="assets/cockatiel.jpg" aria-label="View larger: cockatiel portrait">
-        <img src="assets/cockatiel.jpg" alt="Close-up of a cockatiel" loading="lazy">
-      </button>
-      <button data-full="assets/budgies.jpg" aria-label="View larger: budgerigars">
-        <img src="assets/budgies.jpg" alt="Two budgerigars on a branch" loading="lazy">
-      </button>
-      <button class="g-wide" data-full="assets/aquarium.jpg" aria-label="View larger: aquarium set-up">
-        <img src="assets/aquarium.jpg" alt="Planted aquarium with tropical fish" loading="lazy">
-      </button>
-      <button data-full="assets/lovebirds.jpg" aria-label="View larger: lovebirds">
-        <img src="assets/lovebirds.jpg" alt="Two lovebirds side by side" loading="lazy">
-      </button>
-      <button data-full="assets/supplies.jpg" aria-label="View larger: pet supplies">
-        <img src="assets/supplies.jpg" alt="Bird seed, bowls, perches and toys laid out" loading="lazy">
-      </button>
-      <button data-full="assets/cages.jpg" aria-label="View larger: cages">
-        <img src="assets/cages.jpg" alt="Bird cage and small aquarium on shop shelves" loading="lazy">
-      </button>
-      <button data-full="assets/dog-cat.jpg" aria-label="View larger: dog and cat">
-        <img src="assets/dog-cat.jpg" alt="Golden retriever and tabby cat together" loading="lazy">
-      </button>
+    <div class="steps">
+      <article class="step reveal">
+        <span class="step__num">01</span>
+        <h3 class="step__title">Call or WhatsApp</h3>
+        <p class="step__text">Tell us what you need — bird feed, a cage, or a starter set-up. Not sure? Ask; we'll help you choose.</p>
+      </article>
+      <article class="step reveal" style="--d:80ms">
+        <span class="step__num">02</span>
+        <h3 class="step__title">We confirm stock &amp; price</h3>
+        <p class="step__text">We check the shelf and reply with availability, the exact price and how soon you can have it.</p>
+      </article>
+      <article class="step reveal" style="--d:160ms">
+        <span class="step__num">03</span>
+        <h3 class="step__title">Collect or get delivery</h3>
+        <p class="step__text">Pick it up from the shop on Kagmari Road, or we'll arrange local delivery around Tangail.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -1354,7 +1316,8 @@ ul{margin:0;padding:0;list-style:none;}
         <ul class="footer__list">
           <li><a href="#shop">Shop &amp; categories</a></li>
           <li><a href="#about">About the store</a></li>
-          <li><a href="#gallery">Photo gallery</a></li>
+          <li><a href="#birds">Our birds</a></li>
+          <li><a href="#how">How ordering works</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
@@ -1397,12 +1360,6 @@ ul{margin:0;padding:0;list-style:none;}
     <i class="fa-brands fa-whatsapp"></i>
   </a>
   <button class="fab fab--top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-</div>
-
-<!-- ================= Lightbox ================= -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lightbox__close" id="lightboxClose" aria-label="Close image"><i class="fa-solid fa-xmark"></i></button>
-  <img alt="" id="lightboxImg">
 </div>
 
 <script>
@@ -1450,9 +1407,7 @@ ul{margin:0;padding:0;list-style:none;}
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key !== 'Escape') return;
-    closeDrawer();
-    closeLightbox();
+    if (e.key === 'Escape') closeDrawer();
   });
 
   /* ---------- Reveal on scroll ---------- */
@@ -1470,57 +1425,6 @@ ul{margin:0;padding:0;list-style:none;}
   } else {
     revealEls.forEach(function (el) { el.classList.add('is-in'); });
   }
-
-  /* ---------- Gallery lightbox ---------- */
-  var lightbox = document.getElementById('lightbox');
-  var lightboxImg = document.getElementById('lightboxImg');
-  var lightboxClose = document.getElementById('lightboxClose');
-
-  function openLightbox(src, alt) {
-    lightboxImg.src = src;
-    lightboxImg.alt = alt || '';
-    lightbox.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox() {
-    lightbox.classList.remove('is-open');
-    if (!drawer.classList.contains('is-open')) document.body.style.overflow = '';
-    setTimeout(function () {
-      if (!lightbox.classList.contains('is-open')) lightboxImg.src = '';
-    }, 300);
-  }
-
-  document.querySelectorAll('.gallery button').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var img = btn.querySelector('img');
-      openLightbox(btn.dataset.full, img ? img.alt : '');
-    });
-  });
-  lightboxClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', function (e) {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  /* ---------- FAQ accordion ---------- */
-  document.querySelectorAll('.faq__item').forEach(function (item) {
-    var q = item.querySelector('.faq__q');
-    var a = item.querySelector('.faq__a');
-    q.addEventListener('click', function () {
-      var isOpen = item.classList.contains('is-open');
-
-      document.querySelectorAll('.faq__item.is-open').forEach(function (other) {
-        if (other !== item) {
-          other.classList.remove('is-open');
-          other.querySelector('.faq__q').setAttribute('aria-expanded', 'false');
-          other.querySelector('.faq__a').style.maxHeight = null;
-        }
-      });
-
-      item.classList.toggle('is-open', !isOpen);
-      q.setAttribute('aria-expanded', String(!isOpen));
-      a.style.maxHeight = isOpen ? null : a.scrollHeight + 'px';
-    });
-  });
 
   /* Open the first FAQ by default */
   var firstFaq = document.querySelector('.faq__item');
@@ -1587,7 +1491,7 @@ ul{margin:0;padding:0;list-style:none;}
   "@type": "PetStore",
   "name": "Rafi A Pets",
   "description": "Pet store in Tangail, Bangladesh. Pet birds, aquarium fish, bird seed, dog and cat food, cages and accessories. Open 24 hours with in-store shopping, pick-up and local delivery.",
-  "image": "assets/hero-shop.jpg",
+  "image": "assets/shop-listing.jpg",
   "url": "https://sikdershakib.github.io/uddogpoint/rafi-a-pets/",
   "telephone": "+8801709518395",
   "priceRange": "৳",
