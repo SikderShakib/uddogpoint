@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rafi A Pets — Pet Store in Tangail | Birds, Fish, Food &amp; Accessories</title>
+<meta name="description" content="Rafi A Pets is a 24-hour pet store on Kagmari Road, Tangail. Healthy pet birds, aquarium fish, bird seed, dog &amp; cat food, cages, bowls and accessories — with in-store shopping, pick-up and delivery. Call 01709-518395.">
+<meta name="theme-color" content="#0E3B2B">
+<link rel="canonical" href="https://sikdershakib.github.io/uddogpoint/rafi-a-pets/">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rafi A Pets">
+<meta property="og:title" content="Rafi A Pets — Your 24-hour pet store in Tangail">
+<meta property="og:description" content="Birds, fish, food and everything in between. Open 24 hours on Kagmari Road, Tangail. Call 01709-518395.">
+<meta property="og:image" content="assets/shop-listing.jpg">
+<meta property="og:image:alt" content="A cockatiel, budgerigars and lovebirds at Rafi A Pets in Tangail">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+/* ============================================================
+   1. Design tokens
+   ============================================================ */
+:root{
+  --cream:#FBF6ED;
+  --cream-2:#F4EADA;
+  --white:#FFFFFF;
+  --ink:#12241C;
+  --ink-soft:#4B5D53;
+  --forest:#0E3B2B;
+  --forest-mid:#17503A;
+  --sage:#DCE9DF;
+  --amber:#E7A03C;
+  --amber-soft:#F8E3C1;
+  --line:rgba(18,36,28,.11);
+  --line-soft:rgba(18,36,28,.06);
+  --shadow-sm:0 2px 10px rgba(18,36,28,.05);
+  --shadow:0 26px 50px -30px rgba(18,36,28,.45);
+  --shadow-lg:0 40px 70px -40px rgba(18,36,28,.5);
+  --radius:26px;
+  --radius-sm:16px;
+  --max:1180px;
+  --font-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --font-body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+/* ============================================================
+   2. Base
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+section[id]{scroll-margin-top:86px;}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  font-size:17px;
+  line-height:1.7;
+  color:var(--ink);
+  background:var(--cream);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;}
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  font-weight:500;
+  letter-spacing:-.022em;
+  line-height:1.06;
+  margin:0;
+  font-variation-settings:"SOFT" 0,"WONK" 0;
+}
+p{margin:0;}
+ul{margin:0;padding:0;list-style:none;}
+::selection{background:var(--amber);color:var(--forest);}
+
+.container{width:min(var(--max),92vw);margin-inline:auto;}
+.section{padding:clamp(64px,8vw,110px) 0;}
+.section--white{background:var(--white);}
+.section--sage{background:linear-gradient(180deg,#EAF1EA 0%,#F2F6F0 100%);}
+.section--dark{background:var(--forest);color:#F2EEE4;}
+
+/* Section headings */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:var(--font-body);font-size:.72rem;font-weight:800;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--forest-mid);
+  margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--amber);border-radius:2px;}
+.section--dark .eyebrow{color:var(--amber-soft);}
+
+.h2{font-size:clamp(2rem,4.2vw,3.1rem);}
+.h2 em{font-style:italic;color:var(--forest-mid);}
+.section--dark .h2 em{color:var(--amber);}
+.lede{color:var(--ink-soft);font-size:1.02rem;max-width:57ch;margin-top:18px;}
+.section--dark .lede{color:rgba(242,238,228,.72);}
+.section-head{max-width:720px;margin-bottom:clamp(36px,5vw,56px);}
+.section-head--center{margin-inline:auto;text-align:center;}
+.section-head--center .eyebrow{justify-content:center;}
+.section-head--center .lede{margin-inline:auto;}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  padding:15px 26px;border-radius:999px;border:1px solid transparent;
+  font-size:.95rem;font-weight:800;letter-spacing:-.01em;line-height:1;
+  cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease,border-color .25s ease;
+  white-space:nowrap;
+}
+.btn i{font-size:.9em;}
+.btn:hover{transform:translateY(-2px);}
+.btn:focus-visible{outline:3px solid var(--amber);outline-offset:3px;}
+.btn--primary{background:var(--forest);color:#FBF6ED;box-shadow:0 14px 26px -16px rgba(14,59,43,.9);}
+.btn--primary:hover{background:var(--forest-mid);box-shadow:0 20px 32px -16px rgba(14,59,43,.75);}
+.btn--amber{background:var(--amber);color:#22190A;box-shadow:0 14px 26px -16px rgba(231,160,60,.95);}
+.btn--amber:hover{background:#F0B156;}
+.btn--ghost{background:transparent;color:var(--ink);border-color:rgba(18,36,28,.2);}
+.btn--ghost:hover{border-color:var(--forest);background:rgba(14,59,43,.05);}
+.btn--onDark{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#F7F2E8;}
+.btn--onDark:hover{background:rgba(255,255,255,.16);}
+.btn--sm{padding:12px 20px;font-size:.86rem;}
+
+/* ============================================================
+   3. Announcement bar + header
+   ============================================================ */
+.topbar{
+  background:var(--forest);color:rgba(247,242,232,.88);
+  font-size:.79rem;font-weight:600;letter-spacing:.01em;
+}
+.topbar__inner{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  min-height:40px;flex-wrap:wrap;
+}
+.topbar__group{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+.topbar__item{display:inline-flex;align-items:center;gap:7px;}
+.topbar__item i{color:var(--amber);font-size:.8rem;}
+.topbar a:hover{color:#fff;}
+
+.site-header{
+  position:sticky;top:0;z-index:70;
+  background:rgba(251,246,237,.82);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s ease,box-shadow .3s ease,background .3s ease;
+}
+.site-header.is-stuck{
+  border-bottom-color:var(--line);
+  box-shadow:0 10px 30px -24px rgba(18,36,28,.7);
+  background:rgba(251,246,237,.94);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  min-height:78px;
+}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto;}
+.brand__mark{
+  width:44px;height:44px;border-radius:14px;
+  background:var(--forest);color:var(--amber);
+  display:grid;place-items:center;font-size:1.15rem;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);
+}
+.brand__text{display:flex;flex-direction:column;line-height:1;}
+.brand__name{
+  font-family:var(--font-display);font-size:1.28rem;font-weight:600;
+  letter-spacing:.045em;color:var(--forest);text-transform:uppercase;
+}
+.brand__tag{
+  font-size:.58rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--ink-soft);margin-top:6px;
+}
+.nav__links{display:flex;align-items:center;gap:30px;}
+.nav__links a{
+  font-size:.9rem;font-weight:700;color:var(--ink-soft);
+  position:relative;padding:6px 0;transition:color .2s ease;
+}
+.nav__links a::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:0;
+  background:var(--amber);border-radius:2px;transition:width .25s ease;
+}
+.nav__links a:hover,.nav__links a.is-active{color:var(--forest);}
+.nav__links a:hover::after,.nav__links a.is-active::after{width:100%;}
+.nav__actions{display:flex;align-items:center;gap:12px;}
+.nav__phone{
+  display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:.9rem;
+  color:var(--forest);padding:10px 4px;
+}
+.nav__phone i{color:var(--amber);}
+.nav__toggle{
+  display:none;width:46px;height:46px;border-radius:13px;border:1px solid var(--line);
+  background:var(--white);color:var(--forest);font-size:1.05rem;cursor:pointer;
+}
+
+/* Mobile drawer */
+.drawer{
+  position:fixed;inset:0;z-index:90;
+  background:rgba(9,26,19,.45);backdrop-filter:blur(3px);
+  opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;
+}
+.drawer.is-open{opacity:1;visibility:visible;}
+.drawer__panel{
+  position:absolute;right:0;top:0;height:100%;width:min(360px,88vw);
+  background:var(--cream);padding:26px 24px 32px;
+  display:flex;flex-direction:column;gap:6px;
+  transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);
+  box-shadow:-30px 0 60px -30px rgba(0,0,0,.5);
+}
+.drawer.is-open .drawer__panel{transform:none;}
+.drawer__head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+.drawer__close{
+  width:42px;height:42px;border-radius:12px;border:1px solid var(--line);
+  background:var(--white);color:var(--forest);font-size:1rem;cursor:pointer;
+}
+.drawer__link{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:15px 4px;border-bottom:1px solid var(--line-soft);
+  font-weight:700;font-size:1rem;color:var(--ink);
+}
+.drawer__link i{color:var(--amber);font-size:.8rem;}
+.drawer__foot{margin-top:auto;display:grid;gap:10px;padding-top:24px;}
+
+/* ============================================================
+   4. Hero
+   ============================================================ */
+.hero{
+  position:relative;
+  padding:clamp(42px,6vw,76px) 0 clamp(60px,7vw,90px);
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;z-index:0;
+  width:680px;height:680px;right:-220px;top:-260px;border-radius:50%;
+  background:radial-gradient(circle,rgba(231,160,60,.20) 0%,rgba(231,160,60,0) 68%);
+  pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;z-index:0;
+  width:560px;height:560px;left:-260px;bottom:-300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(23,80,58,.14) 0%,rgba(23,80,58,0) 70%);
+  pointer-events:none;
+}
+.hero__grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(32px,4.5vw,60px);
+  align-items:center;
+}
+.hero__badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--white);border:1px solid var(--line);
+  border-radius:999px;padding:8px 8px 8px 10px;
+  font-size:.76rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--forest);box-shadow:var(--shadow-sm);
+}
+.hero__badge .dot{
+  width:8px;height:8px;border-radius:50%;background:#37A169;
+  box-shadow:0 0 0 4px rgba(55,161,105,.16);
+}
+.hero__badge .sep{width:1px;height:14px;background:var(--line);}
+.hero__badge .muted{color:var(--ink-soft);font-weight:700;letter-spacing:.04em;}
+.hero h1{
+  font-size:clamp(2.6rem,5.6vw,4.15rem);
+  margin:22px 0 0;
+  letter-spacing:-.03em;
+}
+.hero h1 em{
+  font-style:italic;color:var(--forest-mid);position:relative;white-space:nowrap;
+}
+.hero h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:.06em;height:.28em;z-index:-1;
+  background:var(--amber-soft);border-radius:3px;
+}
+.hero__copy{
+  margin-top:22px;font-size:1.06rem;color:var(--ink-soft);max-width:52ch;
+}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+.hero__meta{
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;
+  margin-top:34px;padding-top:26px;border-top:1px solid var(--line);
+  font-size:.86rem;font-weight:700;color:var(--ink-soft);
+}
+.hero__meta span{display:inline-flex;align-items:center;gap:8px;}
+.hero__meta i{color:var(--amber);}
+.hero__meta .stars{color:var(--amber);letter-spacing:.08em;font-size:.78rem;}
+
+/* Hero visual */
+.hero__visual{position:relative;}
+.hero__frame{
+  position:relative;border-radius:34px;overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  background:var(--cream-2);
+  aspect-ratio:5/5.4;
+}
+.hero__frame img{width:100%;height:100%;object-fit:cover;object-position:50% 4%;}
+.hero__frame::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(9,26,19,0) 52%,rgba(9,26,19,.34) 100%);
+}
+.float-card{
+  position:absolute;z-index:2;background:rgba(255,255,255,.96);
+  border:1px solid rgba(255,255,255,.6);
+  border-radius:18px;box-shadow:0 24px 44px -26px rgba(9,26,19,.65);
+  backdrop-filter:blur(8px);
+  display:flex;align-items:center;gap:12px;
+  padding:13px 17px;
+}
+.float-card__icon{
+  width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+  background:var(--sage);color:var(--forest);font-size:.95rem;flex:0 0 auto;
+}
+.float-card__icon--amber{background:var(--amber-soft);color:#7A4A08;}
+.float-card__label{
+  display:block;
+  font-size:.62rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-soft);line-height:1;
+}
+.float-card__value{display:block;font-family:var(--font-display);font-size:1.02rem;font-weight:600;color:var(--ink);line-height:1.2;margin-top:5px;}
+.float-card--open{top:22px;left:-18px;}
+.float-card--rating{bottom:26px;right:-16px;}
+.float-card--rating .stars{display:block;color:var(--amber);font-size:.72rem;letter-spacing:.08em;margin-top:5px;}
+.hero__stamp{
+  position:absolute;z-index:2;bottom:-24px;left:26px;
+  width:104px;height:104px;border-radius:50%;
+  background:var(--forest);color:var(--amber-soft);
+  display:grid;place-items:center;text-align:center;
+  font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  line-height:1.5;border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 20px 34px -20px rgba(9,26,19,.9);
+  animation:bob 5s ease-in-out infinite;
+}
+.hero__stamp i{display:block;font-size:1.05rem;margin-bottom:5px;color:var(--amber);}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+/* ============================================================
+   5. Trust strip
+   ============================================================ */
+.trust{
+  background:var(--white);
+  border-top:1px solid var(--line-soft);
+  border-bottom:1px solid var(--line-soft);
+}
+.trust__grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:8px 28px;padding:26px 0;
+}
+.trust__item{display:flex;align-items:flex-start;gap:13px;}
+.trust__item i{
+  color:var(--forest-mid);font-size:1.02rem;margin-top:4px;
+}
+.trust__title{font-size:.92rem;font-weight:800;letter-spacing:-.01em;}
+.trust__sub{font-size:.78rem;color:var(--ink-soft);line-height:1.5;margin-top:2px;}
+
+/* ============================================================
+   6. Category cards
+   ============================================================ */
+.cat-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.cat{
+  background:var(--white);border:1px solid var(--line-soft);
+  border-radius:var(--radius);padding:28px 26px 26px;
+  display:flex;flex-direction:column;gap:12px;
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+  position:relative;overflow:hidden;
+}
+.cat::before{
+  content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;
+  border-radius:50%;background:var(--cream);opacity:.9;
+  transition:transform .4s ease;
+}
+.cat:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(18,36,28,.16);}
+.cat:hover::before{transform:scale(1.35);}
+.cat__icon{
+  position:relative;z-index:1;
+  width:52px;height:52px;border-radius:15px;display:grid;place-items:center;
+  background:var(--forest);color:var(--amber-soft);font-size:1.15rem;
+}
+.cat:nth-child(2n) .cat__icon{background:var(--sage);color:var(--forest);}
+.cat:nth-child(3n) .cat__icon{background:var(--amber-soft);color:#7A4A08;}
+.cat__title{font-size:1.24rem;font-weight:600;margin-top:6px;position:relative;z-index:1;}
+.cat__text{font-size:.9rem;color:var(--ink-soft);line-height:1.65;position:relative;z-index:1;}
+.cat__tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px;position:relative;z-index:1;}
+.cat__tags span{
+  font-size:.68rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+  padding:5px 9px;border-radius:7px;
+  background:var(--cream);color:var(--forest-mid);
+}
+
+/* ============================================================
+   7. Featured pets
+   ============================================================ */
+.pet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.pet{
+  position:relative;border-radius:var(--radius);overflow:hidden;
+  background:var(--forest);color:#F7F2E8;
+  box-shadow:var(--shadow-sm);
+}
+.pet img{
+  width:100%;height:370px;object-fit:cover;
+  transition:transform .7s cubic-bezier(.2,.8,.2,1);
+}
+.pet:hover img{transform:scale(1.06);}
+.pet__body{
+  position:absolute;inset:auto 0 0 0;padding:22px 20px 20px;
+  background:linear-gradient(180deg,rgba(9,26,19,0) 0%,rgba(9,26,19,.86) 62%);
+}
+.pet__tag{
+  display:inline-block;font-size:.6rem;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.24);
+  padding:4px 9px;border-radius:6px;margin-bottom:9px;color:#FFF6E4;
+}
+.pet__name{font-family:var(--font-display);font-size:1.2rem;font-weight:600;line-height:1.2;}
+.pet__note{font-size:.78rem;color:rgba(247,242,232,.78);margin-top:5px;}
+.pets-note{
+  display:flex;align-items:flex-start;gap:10px;justify-content:center;
+  margin-top:26px;font-size:.84rem;font-weight:600;color:var(--ink-soft);
+  text-align:center;line-height:1.6;
+}
+.pets-note i{color:var(--forest-mid);margin-top:4px;font-size:.8rem;}
+
+/* ============================================================
+   8. About / split
+   ============================================================ */
+.split{
+  display:grid;grid-template-columns:.92fr 1.08fr;
+  gap:clamp(34px,5vw,70px);align-items:center;
+}
+.split__media{position:relative;}
+.listing-card{
+  margin:0;background:var(--white);padding:12px 12px 0;
+  border-radius:24px;border:1px solid var(--line-soft);
+  box-shadow:var(--shadow);transform:rotate(-1.2deg);
+}
+.listing-card img{
+  width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:15px;
+  background:var(--cream-2);
+}
+.listing-card figcaption{
+  display:flex;align-items:center;gap:9px;padding:15px 8px;
+  font-size:.74rem;font-weight:800;color:var(--ink-soft);letter-spacing:.01em;
+}
+.listing-card figcaption i{color:var(--amber);font-size:.72rem;}
+.checklist{display:grid;gap:14px;margin-top:28px;}
+.checklist li{display:flex;gap:13px;align-items:flex-start;font-size:.95rem;color:var(--ink-soft);}
+.checklist i{
+  color:var(--forest);background:var(--sage);width:24px;height:24px;flex:0 0 24px;
+  border-radius:50%;display:grid;place-items:center;font-size:.62rem;margin-top:3px;
+}
+.checklist strong{color:var(--ink);font-weight:800;}
+
+/* ============================================================
+   9. How ordering works
+   ============================================================ */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.step{
+  position:relative;background:var(--white);border:1px solid var(--line-soft);
+  border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow-sm);
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+}
+.step:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(18,36,28,.16);}
+.step:not(:last-child)::after{
+  content:"";position:absolute;top:52px;right:-20px;width:20px;height:1px;
+  background:linear-gradient(90deg,var(--line),rgba(18,36,28,.02));
+}
+.step__num{
+  display:block;font-family:var(--font-display);font-size:2rem;font-weight:600;
+  line-height:1;color:var(--amber);
+}
+.step__title{font-size:1.2rem;margin-top:18px;}
+.step__text{font-size:.92rem;line-height:1.7;color:var(--ink-soft);margin-top:10px;}
+
+/* ============================================================
+   10. Reviews
+   ============================================================ */
+.reviews{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,4vw,50px);align-items:start;}
+.rating-card{
+  background:var(--white);border-radius:var(--radius);padding:30px;
+  border:1px solid var(--line-soft);box-shadow:var(--shadow-sm);
+  position:sticky;top:110px;
+}
+.rating-card__score{
+  font-family:var(--font-display);font-size:3.6rem;line-height:1;font-weight:600;color:var(--forest);
+}
+.rating-card__stars{color:var(--amber);letter-spacing:.16em;font-size:1rem;margin:10px 0 6px;}
+.rating-card__meta{font-size:.85rem;color:var(--ink-soft);}
+.rating-card__bars{display:grid;gap:8px;margin:22px 0 20px;padding-top:20px;border-top:1px solid var(--line-soft);}
+.bar{display:flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;color:var(--ink-soft);}
+.bar__track{flex:1;height:6px;border-radius:99px;background:var(--cream-2);overflow:hidden;}
+.bar__fill{height:100%;background:var(--amber);border-radius:99px;}
+.review{
+  background:var(--white);border:1px solid var(--line-soft);
+  border-radius:var(--radius);padding:26px 26px 24px;box-shadow:var(--shadow-sm);
+}
+.review + .review{margin-top:16px;}
+.review__stars{color:var(--amber);font-size:.8rem;letter-spacing:.14em;}
+.review__text{font-family:var(--font-display);font-size:1.12rem;line-height:1.5;margin-top:12px;color:var(--ink);}
+.review__who{display:flex;align-items:center;gap:12px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line-soft);}
+.avatar{
+  width:38px;height:38px;border-radius:50%;background:var(--sage);color:var(--forest);
+  display:grid;place-items:center;font-weight:800;font-size:.82rem;
+}
+.review__name{display:block;font-size:.86rem;font-weight:800;line-height:1.2;}
+.review__src{display:block;font-size:.72rem;color:var(--ink-soft);margin-top:2px;}
+
+/* ============================================================
+   11. FAQ
+   ============================================================ */
+.faq{display:grid;gap:12px;max-width:840px;margin-inline:auto;}
+.faq__item{
+  background:var(--white);border:1px solid var(--line-soft);border-radius:18px;
+  overflow:hidden;transition:border-color .25s ease,box-shadow .25s ease;
+}
+.faq__item.is-open{border-color:rgba(18,36,28,.18);box-shadow:var(--shadow-sm);}
+.faq__q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:20px 22px;background:none;border:0;cursor:pointer;text-align:left;
+  font-size:.99rem;font-weight:800;color:var(--ink);letter-spacing:-.01em;
+}
+.faq__q i{color:var(--forest-mid);font-size:.8rem;transition:transform .3s ease;flex:0 0 auto;}
+.faq__item.is-open .faq__q i{transform:rotate(180deg);}
+.faq__a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq__a p{padding:0 22px 22px;font-size:.92rem;color:var(--ink-soft);}
+
+/* ============================================================
+   12. Visit / contact
+   ============================================================ */
+.visit{
+  background:var(--forest);color:#F3EEE4;position:relative;overflow:hidden;
+}
+.visit .eyebrow{color:var(--amber-soft);}
+.visit .h2 em{color:var(--amber);}
+.visit .lede{color:rgba(243,238,228,.74);}
+.visit::before{
+  content:"";position:absolute;width:620px;height:620px;border-radius:50%;
+  top:-260px;right:-160px;
+  background:radial-gradient(circle,rgba(231,160,60,.20),rgba(231,160,60,0) 68%);
+}
+.visit__grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4.5vw,60px);
+  align-items:start;
+}
+.visit__list{display:grid;gap:2px;margin-top:34px;}
+.visit__row{
+  display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12);
+}
+.visit__row:first-child{border-top:1px solid rgba(255,255,255,.12);}
+.visit__row i{
+  color:var(--amber);font-size:1rem;width:22px;margin-top:5px;flex:0 0 auto;
+}
+.visit__label{
+  font-size:.63rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(243,238,228,.55);margin-bottom:4px;
+}
+.visit__value{font-size:1rem;font-weight:700;line-height:1.55;color:#FBF7EE;}
+.visit__value a:hover{color:var(--amber);}
+.visit__value small{display:block;font-weight:600;font-size:.82rem;color:rgba(243,238,228,.62);margin-top:3px;}
+.visit__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+
+.map-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius);padding:10px;box-shadow:var(--shadow-lg);
+}
+.map-card iframe{
+  width:100%;height:290px;border:0;border-radius:18px;display:block;
+  filter:saturate(.92);
+}
+.map-card__foot{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:14px 12px 8px;font-size:.8rem;color:rgba(243,238,228,.7);
+}
+.map-card__foot a{font-weight:800;color:var(--amber);white-space:nowrap;}
+
+/* Form */
+.form-card{
+  margin-top:20px;background:var(--white);color:var(--ink);
+  border-radius:var(--radius);padding:clamp(24px,3vw,32px);box-shadow:var(--shadow-lg);
+}
+.form-card h3{font-size:1.45rem;}
+.form-card p.form-card__sub{font-size:.86rem;color:var(--ink-soft);margin-top:8px;}
+.form{display:grid;gap:14px;margin-top:22px;}
+.field{display:grid;gap:7px;}
+.field label{
+  font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);
+}
+.field input,.field select,.field textarea{
+  font-family:inherit;font-size:.94rem;font-weight:600;color:var(--ink);
+  background:var(--cream);border:1px solid var(--line);border-radius:12px;
+  padding:13px 14px;width:100%;transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.field textarea{resize:vertical;min-height:92px;}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--forest-mid);background:#fff;
+  box-shadow:0 0 0 4px rgba(23,80,58,.1);
+}
+.form__row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form__note{font-size:.72rem;color:var(--ink-soft);line-height:1.6;margin-top:2px;}
+.form__note i{color:#2E9E68;}
+
+/* ============================================================
+   13. Footer
+   ============================================================ */
+.footer{background:#09251A;color:rgba(243,238,228,.72);padding:clamp(52px,6vw,72px) 0 0;font-size:.88rem;}
+.footer__grid{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:36px;
+  padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);
+}
+.footer .brand__name{color:#FBF7EE;}
+.footer .brand__tag{color:rgba(243,238,228,.5);}
+.footer .brand__mark{background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);}
+.footer__blurb{margin-top:18px;max-width:32ch;line-height:1.7;font-size:.85rem;}
+.footer__social{display:flex;gap:10px;margin-top:20px;}
+.footer__social a{
+  width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  color:#F3EEE4;transition:background .2s ease,color .2s ease,transform .2s ease;
+}
+.footer__social a:hover{background:var(--amber);color:#22190A;transform:translateY(-2px);}
+.footer h4{
+  font-family:var(--font-body);font-size:.68rem;font-weight:800;
+  letter-spacing:.16em;text-transform:uppercase;color:rgba(243,238,228,.5);
+  margin:0 0 16px;
+}
+.footer__list{display:grid;gap:11px;}
+.footer__list a:hover{color:var(--amber);}
+.footer__bottom{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding:22px 0;font-size:.76rem;color:rgba(243,238,228,.5);
+}
+.footer__bottom a{color:rgba(243,238,228,.8);}
+.footer__bottom a:hover{color:var(--amber);}
+
+/* Floating actions (+ back to top) */
+.floating{
+  position:fixed;right:18px;bottom:18px;z-index:60;
+  display:flex;flex-direction:column;gap:10px;align-items:flex-end;
+}
+.fab{
+  width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
+  font-size:1.28rem;color:#fff;box-shadow:0 16px 30px -14px rgba(0,0,0,.6);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.fab:hover{transform:translateY(-3px) scale(1.03);}
+.fab--wa{background:#25D366;color:#062E1B;}
+.fab--top{position:absolute;right:0;bottom:calc(100% + 10px);background:rgba(14,59,43,.9);color:#FBF6ED;font-size:.95rem;width:44px;height:44px;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s,transform .2s ease;}
+.fab--top.is-visible{opacity:1;visibility:visible;}
+
+/* ============================================================
+   14. Reveal animation
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0ms);}
+.reveal.is-in{opacity:1;transform:none;}
+
+/* ============================================================
+   15. Responsive
+   ============================================================ */
+@media (max-width:1024px){
+  .nav__links{gap:20px;}
+  .hero__frame{aspect-ratio:5/4.9;}
+  .trust__grid{grid-template-columns:repeat(2,1fr);gap:22px 28px;}
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .pet-grid{grid-template-columns:repeat(2,1fr);}
+  .pet img{height:300px;}
+  .footer__grid{grid-template-columns:1fr 1fr;gap:34px;}
+  .reviews{grid-template-columns:1fr;}
+  .rating-card{position:static;}
+}
+@media (max-width:1080px){
+  .nav__links,.nav__phone{display:none;}
+  .nav__toggle{display:grid;place-items:center;}
+}
+@media (max-width:860px){
+  body{font-size:16px;}
+  .nav{min-height:70px;}
+  .hero__grid{grid-template-columns:1fr;}
+  .hero__visual{order:2;margin-top:6px;}
+  .hero__frame{aspect-ratio:5/4.2;}
+  .float-card--open{left:10px;top:14px;padding:10px 13px;}
+  .float-card--rating{right:10px;bottom:14px;padding:10px 13px;}
+  .hero__stamp{display:none;}
+  .split{grid-template-columns:1fr;}
+  .split__media{order:-1;}
+  .steps{grid-template-columns:1fr;gap:14px;}
+  .step:not(:last-child)::after{display:none;}
+  .visit__grid{grid-template-columns:1fr;}
+  .map-card iframe{height:250px;}
+  .topbar__inner{justify-content:center;min-height:44px;}
+  .topbar__group{gap:16px;}
+  .topbar__item--hide{display:none;}
+}
+@media (max-width:640px){
+  .section{padding:56px 0;}
+  .hero{padding-top:34px;}
+  .hero h1{font-size:clamp(2.15rem,9vw,2.8rem);}
+  .hero h1 em{white-space:normal;}
+  .hero__cta{gap:10px;}
+  .hero__cta .btn{flex:1 1 100%;}
+  .hero__meta{gap:10px 18px;font-size:.8rem;}
+  .trust__grid{grid-template-columns:1fr;padding:22px 0;gap:18px;}
+  .cat-grid,.pet-grid{grid-template-columns:1fr;}
+  .pet img{height:280px;}
+  .form__row{grid-template-columns:1fr;}
+  .footer__grid{grid-template-columns:1fr;gap:30px;}
+  .footer__bottom{justify-content:center;text-align:center;}
+  .float-card__value{font-size:.92rem;}
+  .floating{right:14px;bottom:14px;}
+  .fab{width:50px;height:50px;font-size:1.15rem;}
+  .review__text{font-size:1.02rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important;}
+  .reveal{opacity:1;transform:none;}
+}
+</style>
+</head>
+<body id="home">
+
+<!-- ================= Announcement ================= -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__group">
+      <span class="topbar__item"><i class="fa-solid fa-location-dot"></i> Kagmari Rd, Tangail 1900</span>
+      <span class="topbar__item topbar__item--hide"><i class="fa-regular fa-clock"></i> Open 24 hours, every day</span>
+    </div>
+    <div class="topbar__group">
+      <span class="topbar__item topbar__item--hide"><i class="fa-solid fa-truck-fast"></i> Home delivery available</span>
+      <a class="topbar__item" href="tel:+8801709518395"><i class="fa-solid fa-phone"></i> 01709-518395</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= Header ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#home" aria-label="Rafi A Pets — home">
+        <span class="brand__mark"><i class="fa-solid fa-dove" aria-hidden="true"></i></span>
+        <span class="brand__text">
+          <span class="brand__name">Rafi A Pets</span>
+          <span class="brand__tag">Pet Store · Tangail</span>
+        </span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#birds">Birds</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a class="nav__phone" href="tel:+8801709518395"><i class="fa-solid fa-phone"></i> 01709-518395</a>
+        <a class="btn btn--primary btn--sm" href="#visit">Plan a visit <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= Mobile drawer ================= -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="drawer__panel">
+    <div class="drawer__head">
+      <span class="brand">
+        <span class="brand__mark"><i class="fa-solid fa-dove"></i></span>
+        <span class="brand__text">
+          <span class="brand__name">Rafi A Pets</span>
+          <span class="brand__tag">Tangail</span>
+        </span>
+      </span>
+      <button class="drawer__close" id="navClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <a class="drawer__link" href="#shop">Shop <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="drawer__link" href="#about">About <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="drawer__link" href="#birds">Our birds <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="drawer__link" href="#how">How it works <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="drawer__link" href="#reviews">Reviews <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="drawer__link" href="#faq">FAQ <i class="fa-solid fa-arrow-right"></i></a>
+    <a class="drawer__link" href="#visit">Visit us <i class="fa-solid fa-arrow-right"></i></a>
+    <div class="drawer__foot">
+      <a class="btn btn--primary" href="tel:+8801709518395"><i class="fa-solid fa-phone"></i> Call the store</a>
+      <a class="btn btn--ghost" href="https://wa.me/8801709518395?text=Hi%20Rafi%20A%20Pets%2C%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp us</a>
+    </div>
+  </div>
+</div>
+
+<main>
+<!-- ================= Hero ================= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <div class="hero__badge reveal">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Open now</span>
+          <span class="sep" aria-hidden="true"></span>
+          <span class="muted">24 hours · Kagmari Road</span>
+        </div>
+
+        <h1 class="reveal" style="--d:60ms">A happier pet starts at <em>Rafi A Pets</em>.</h1>
+
+        <p class="hero__copy reveal" style="--d:120ms">
+          Your neighbourhood pet store in Tangail. Healthy birds, aquarium fish, quality food,
+          cages and everyday accessories — with honest advice from people who keep pets themselves.
+        </p>
+
+        <div class="hero__cta reveal" style="--d:180ms">
+          <a class="btn btn--primary" href="tel:+8801709518395"><i class="fa-solid fa-phone"></i> Call 01709-518395</a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rafi+A+Pets,+Kagmari+Rd,+Tangail+1900" target="_blank" rel="noopener"><i class="fa-solid fa-diamond-turn-right"></i> Get directions</a>
+        </div>
+
+        <div class="hero__meta reveal" style="--d:240ms">
+          <span><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</span>
+          <span><i class="fa-regular fa-clock"></i> Open 24 hours</span>
+          <span><i class="fa-solid fa-bag-shopping"></i> Pick-up &amp; delivery</span>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal" style="--d:140ms">
+        <div class="hero__frame">
+          <img src="assets/cockatiel.jpg" alt="A grey cockatiel with a yellow face and orange cheek patch, perched on a branch at Rafi A Pets in Tangail" width="600" height="1209" fetchpriority="high">
+        </div>
+
+        <div class="float-card float-card--open">
+          <span class="float-card__icon"><i class="fa-regular fa-clock"></i></span>
+          <span>
+            <span class="float-card__label">Store hours</span>
+            <span class="float-card__value">Open 24 hours</span>
+          </span>
+        </div>
+
+        <div class="float-card float-card--rating">
+          <span class="float-card__icon float-card__icon--amber"><i class="fa-solid fa-star"></i></span>
+          <span>
+            <span class="float-card__label">Google rating</span>
+            <span class="float-card__value">5.0 / 5.0</span>
+            <span class="stars" aria-hidden="true">★★★★★</span>
+          </span>
+        </div>
+
+        <div class="hero__stamp" aria-hidden="true">
+          <span><i class="fa-solid fa-paw"></i> Tangail's<br>pet corner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Trust strip ================= -->
+<section class="trust" aria-label="Ways to shop with us">
+  <div class="container">
+    <div class="trust__grid">
+      <div class="trust__item reveal">
+        <i class="fa-solid fa-store"></i>
+        <div>
+          <div class="trust__title">In-store shopping</div>
+          <div class="trust__sub">See, meet and choose in person</div>
+        </div>
+      </div>
+      <div class="trust__item reveal" style="--d:70ms">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <div>
+          <div class="trust__title">In-store pick-up</div>
+          <div class="trust__sub">Reserve by phone, collect in minutes</div>
+        </div>
+      </div>
+      <div class="trust__item reveal" style="--d:140ms">
+        <i class="fa-solid fa-truck-fast"></i>
+        <div>
+          <div class="trust__title">Local delivery</div>
+          <div class="trust__sub">Food &amp; supplies brought to your door</div>
+        </div>
+      </div>
+      <div class="trust__item reveal" style="--d:210ms">
+        <i class="fa-solid fa-headset"></i>
+        <div>
+          <div class="trust__title">Always open</div>
+          <div class="trust__sub">Call any hour — we're here</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Categories ================= -->
+<section class="section" id="shop">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What we stock</span>
+      <h2 class="h2">Everything for the pet you <em>already love</em>.</h2>
+      <p class="lede">
+        From a first budgie to a full aquarium set-up, the shelves at Rafi A Pets are stocked
+        for the animals people actually keep in Tangail — plus the food and small things you
+        run out of at the worst possible time.
+      </p>
+    </div>
+
+    <div class="cat-grid">
+      <article class="cat reveal">
+        <span class="cat__icon"><i class="fa-solid fa-dove"></i></span>
+        <h3 class="cat__title">Pet birds</h3>
+        <p class="cat__text">Cockatiels, budgerigars and lovebirds — healthy, active birds raised with care and handled gently.</p>
+        <div class="cat__tags"><span>Cockatiel</span><span>Budgie</span><span>Lovebird</span></div>
+      </article>
+
+      <article class="cat reveal" style="--d:60ms">
+        <span class="cat__icon"><i class="fa-solid fa-wheat-awn"></i></span>
+        <h3 class="cat__title">Bird seed &amp; feed</h3>
+        <p class="cat__text">Clean seed mixes, millet and supplements kept fresh and stored properly — never damp, never dusty.</p>
+        <div class="cat__tags"><span>Seed mix</span><span>Millet</span><span>Treats</span></div>
+      </article>
+
+      <article class="cat reveal" style="--d:120ms">
+        <span class="cat__icon"><i class="fa-solid fa-bone"></i></span>
+        <h3 class="cat__title">Dog &amp; cat food</h3>
+        <p class="cat__text">Trusted brands in the pack sizes that suit a single cat or a full household, plus bowls and basics.</p>
+        <div class="cat__tags"><span>Dry food</span><span>Wet food</span><span>Bowls</span></div>
+      </article>
+
+      <article class="cat reveal">
+        <span class="cat__icon"><i class="fa-solid fa-fish"></i></span>
+        <h3 class="cat__title">Aquariums &amp; fish</h3>
+        <p class="cat__text">Tanks, filters, live plants and colourful freshwater fish — everything to get a new tank cycling safely.</p>
+        <div class="cat__tags"><span>Tanks</span><span>Fish</span><span>Filters</span></div>
+      </article>
+
+      <article class="cat reveal" style="--d:60ms">
+        <span class="cat__icon"><i class="fa-solid fa-border-all"></i></span>
+        <h3 class="cat__title">Cages &amp; stands</h3>
+        <p class="cat__text">Bird cages, stands and carriers in a range of sizes, with perches and fittings that actually last.</p>
+        <div class="cat__tags"><span>Cages</span><span>Perches</span><span>Carriers</span></div>
+      </article>
+
+      <article class="cat reveal" style="--d:120ms">
+        <span class="cat__icon"><i class="fa-solid fa-paw"></i></span>
+        <h3 class="cat__title">Toys &amp; care</h3>
+        <p class="cat__text">Chew toys, bells, swings, grooming bits and the small everyday items that keep pets busy and happy.</p>
+        <div class="cat__tags"><span>Toys</span><span>Swings</span><span>Grooming</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Featured ================= -->
+<section class="section section--sage" id="birds">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Meet the residents</span>
+      <h2 class="h2">A few faces you might <em>meet today</em>.</h2>
+      <p class="lede">Availability changes daily — a quick call is the easiest way to check what's in store right now.</p>
+    </div>
+
+    <div class="pet-grid">
+      <article class="pet reveal">
+        <img src="assets/cockatiel.jpg" alt="Grey cockatiel with a yellow face and orange cheek patch, perched on a branch" loading="lazy" width="600" height="1209" style="object-position:50% 14%">
+        <div class="pet__body">
+          <span class="pet__tag">In store</span>
+          <h3 class="pet__name">Cockatiels</h3>
+          <p class="pet__note">Friendly, hand-tame and full of personality</p>
+        </div>
+      </article>
+
+      <article class="pet reveal" style="--d:80ms">
+        <img src="assets/budgies.jpg" alt="A blue and a green-yellow budgerigar sitting together on a branch" loading="lazy" width="800" height="800">
+        <div class="pet__body">
+          <span class="pet__tag">In store</span>
+          <h3 class="pet__name">Budgerigars</h3>
+          <p class="pet__note">Bright, sociable and easy to keep</p>
+        </div>
+      </article>
+
+      <article class="pet reveal" style="--d:160ms">
+        <img src="assets/lovebirds.jpg" alt="Two lovebirds with orange faces and red beaks perched closely together" loading="lazy" width="800" height="800">
+        <div class="pet__body">
+          <span class="pet__tag">Pairs available</span>
+          <h3 class="pet__name">Lovebirds</h3>
+          <p class="pet__note">Best kept in pairs — lively and affectionate</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="pets-note reveal" style="--d:220ms">
+      <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+      Also on the shelves: bird seed and millet, dog &amp; cat food, cages, bowls, toys and aquarium supplies.
+    </p>
+  </div>
+</section>
+
+<!-- ================= About ================= -->
+<section class="section section--white" id="about">
+  <div class="container">
+    <div class="split">
+      <div class="split__media reveal">
+        <figure class="listing-card">
+          <img src="assets/shop-listing.jpg" alt="Photos of Rafi A Pets' cockatiel, budgerigars and lovebirds, as shown on the shop's Google listing" loading="lazy" width="808" height="808">
+          <figcaption><i class="fa-solid fa-star" aria-hidden="true"></i> Our birds, from our Google listing</figcaption>
+        </figure>
+      </div>
+
+      <div class="split__body">
+        <span class="eyebrow reveal">About the shop</span>
+        <h2 class="h2 reveal" style="--d:60ms">A small shop with a <em>big soft spot</em> for animals.</h2>
+        <p class="lede reveal" style="--d:100ms">
+          Rafi A Pets sits on Kagmari Road in the heart of Tangail. It is the kind of shop where
+          you can ask a question without feeling rushed — what to feed a new budgie, why a fish
+          tank went cloudy, or which cage is the right size for a pair of lovebirds.
+        </p>
+        <p class="lede reveal" style="--d:140ms">
+          The shelves carry what local pet owners genuinely need, and the doors stay open around
+          the clock — because pets do not always have emergencies during shop hours.
+        </p>
+
+        <ul class="checklist reveal" style="--d:180ms">
+          <li><i class="fa-solid fa-check"></i><span><strong>Care before the sale.</strong> We would rather send you home with the right advice than the wrong cage.</span></li>
+          <li><i class="fa-solid fa-check"></i><span><strong>Stock that stays fresh.</strong> Feed is stored properly and checked before it reaches the shelf.</span></li>
+          <li><i class="fa-solid fa-check"></i><span><strong>Open when you need us.</strong> Call at any hour for stock, prices or a quick bit of guidance.</span></li>
+        </ul>
+
+        <div class="hero__cta reveal" style="--d:220ms">
+          <a class="btn btn--primary" href="#visit">Find the shop <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="btn btn--ghost" href="https://wa.me/8801709518395?text=Hi%20Rafi%20A%20Pets%2C%20I%20have%20a%20question%20about%20my%20pet." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Ask a question</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= How it works ================= -->
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Ordering is easy</span>
+      <h2 class="h2">Three steps, and it's <em>on its way</em>.</h2>
+      <p class="lede">No accounts, no checkout forms. Call or message the shop and we'll take it from there.</p>
+    </div>
+
+    <div class="steps">
+      <article class="step reveal">
+        <span class="step__num">01</span>
+        <h3 class="step__title">Call or WhatsApp</h3>
+        <p class="step__text">Tell us what you need — bird feed, a cage, or a starter set-up. Not sure? Ask; we'll help you choose.</p>
+      </article>
+      <article class="step reveal" style="--d:80ms">
+        <span class="step__num">02</span>
+        <h3 class="step__title">We confirm stock &amp; price</h3>
+        <p class="step__text">We check the shelf and reply with availability, the exact price and how soon you can have it.</p>
+      </article>
+      <article class="step reveal" style="--d:160ms">
+        <span class="step__num">03</span>
+        <h3 class="step__title">Collect or get delivery</h3>
+        <p class="step__text">Pick it up from the shop on Kagmari Road, or we'll arrange local delivery around Tangail.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Reviews ================= -->
+<section class="section section--white" id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Kind words</span>
+      <h2 class="h2">Rated <em>five stars</em> by our customers.</h2>
+      <p class="lede">Every review on our Google listing is a five-star one. Here's what people say after visiting.</p>
+    </div>
+
+    <div class="reviews">
+      <div class="rating-card reveal">
+        <div class="rating-card__score">5.0</div>
+        <div class="rating-card__stars" aria-hidden="true">★★★★★</div>
+        <p class="rating-card__meta">Based on 2 Google reviews</p>
+
+        <div class="rating-card__bars" aria-hidden="true">
+          <div class="bar"><span>5</span><span class="bar__track"><span class="bar__fill" style="width:100%"></span></span></div>
+          <div class="bar"><span>4</span><span class="bar__track"><span class="bar__fill" style="width:0"></span></span></div>
+          <div class="bar"><span>3</span><span class="bar__track"><span class="bar__fill" style="width:0"></span></span></div>
+          <div class="bar"><span>2</span><span class="bar__track"><span class="bar__fill" style="width:0"></span></span></div>
+          <div class="bar"><span>1</span><span class="bar__track"><span class="bar__fill" style="width:0"></span></span></div>
+        </div>
+
+        <a class="btn btn--ghost btn--sm" style="width:100%" href="https://www.google.com/maps/search/?api=1&amp;query=Rafi+A+Pets+Kagmari+Rd+Tangail" target="_blank" rel="noopener">
+          Read on Google <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
+      <div>
+        <!-- NOTE: sample reviews — replace with real Google review text before the client goes live. -->
+        <article class="review reveal">
+          <div class="review__stars" aria-hidden="true">★★★★★</div>
+          <p class="review__text">“Found the shop while looking for bird feed and ended up staying for ages asking questions. Very helpful and the birds look well cared for.”</p>
+          <div class="review__who">
+            <span class="avatar" aria-hidden="true">SR</span>
+            <span>
+              <span class="review__name">Sadia R.</span>
+              <span class="review__src">Google review · Tangail</span>
+            </span>
+          </div>
+        </article>
+
+        <article class="review reveal" style="--d:80ms">
+          <div class="review__stars" aria-hidden="true">★★★★★</div>
+          <p class="review__text">“Open late which is a lifesaver. Got food and a new bowl for my cat at 11pm, and the price was fair.”</p>
+          <div class="review__who">
+            <span class="avatar" aria-hidden="true">TH</span>
+            <span>
+              <span class="review__name">Tanvir H.</span>
+              <span class="review__src">Google review · Kagmari Road</span>
+            </span>
+          </div>
+        </article>
+
+        <article class="review reveal" style="--d:160ms">
+          <div class="review__stars" aria-hidden="true">★★★★★</div>
+          <p class="review__text">“Bought a pair of lovebirds here. They gave clear advice on feeding and cage size instead of just selling me the biggest one.”</p>
+          <div class="review__who">
+            <span class="avatar" aria-hidden="true">MA</span>
+            <span>
+              <span class="review__name">Mahmuda A.</span>
+              <span class="review__src">Google review · Tangail</span>
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Good to know</span>
+      <h2 class="h2">Questions, <em>answered</em>.</h2>
+    </div>
+
+    <div class="faq">
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">What are your opening hours? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq__a"><p>We're open 24 hours a day, every day of the week — including holidays. If you're coming from far away, a quick call on 01709-518395 before you travel is always a good idea.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">Do you deliver? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Yes. Local delivery is available for food and supplies around Tangail. Call or message us on WhatsApp with what you need; we'll confirm the delivery area, cost and timing before sending anything.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">Can I reserve something and pick it up? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Of course. Tell us what you want on the phone and we'll keep it aside for you to collect from the shop on Kagmari Road — usually the same day.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">Which birds and fish do you usually have? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Most often cockatiels, budgerigars and lovebirds, along with freshwater aquarium fish and plants. Stock changes week to week, so availability is always best checked by phone or WhatsApp.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">Do you sell food for dogs and cats too? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Yes — dry and wet food for both, in a range of pack sizes, plus bowls and everyday accessories. If you need a specific brand, call ahead and we'll check the shelf for you.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">I'm new to keeping birds. Can you help me set up? <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="faq__a"><p>That's most of what we do. Tell us your budget and the space you have, and we'll put together a straightforward starter list — cage, feed, perches and the bits people usually forget.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Visit / Contact ================= -->
+<section class="section visit" id="visit">
+  <div class="container">
+    <div class="visit__grid">
+      <div>
+        <span class="eyebrow reveal">Come say hello</span>
+        <h2 class="h2 reveal" style="--d:60ms">Visit us on <em>Kagmari Road</em>.</h2>
+        <p class="lede reveal" style="--d:100ms">
+          Easy to find in the middle of Tangail, right on Kagmari Road.
+          Walk in any time — the lights are on 24 hours.
+        </p>
+
+        <div class="visit__list reveal" style="--d:140ms">
+          <div class="visit__row">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <div class="visit__label">Address</div>
+              <div class="visit__value">Kagmari Rd, Tangail 1900, Bangladesh
+                <small>Plus code: 6WQ3+MF Tangail</small>
+              </div>
+            </div>
+          </div>
+          <div class="visit__row">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <div class="visit__label">Opening hours</div>
+              <div class="visit__value">Open 24 hours, all week
+                <small>Including Fridays &amp; public holidays</small>
+              </div>
+            </div>
+          </div>
+          <div class="visit__row">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <div class="visit__label">Phone / WhatsApp</div>
+              <div class="visit__value"><a href="tel:+8801709518395">01709-518395</a>
+                <small>Call for stock, prices or delivery</small>
+              </div>
+            </div>
+          </div>
+          <div class="visit__row">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <div>
+              <div class="visit__label">Ways to shop</div>
+              <div class="visit__value">In-store · Pick-up · Delivery
+                <small>Pay in store; delivery confirmed by phone</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="visit__actions reveal" style="--d:180ms">
+          <a class="btn btn--amber" href="tel:+8801709518395"><i class="fa-solid fa-phone"></i> Call the store</a>
+          <a class="btn btn--onDark" href="https://wa.me/8801709518395?text=Hi%20Rafi%20A%20Pets%2C%20I%27d%20like%20to%20ask%20about%20..." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="map-card reveal">
+          <iframe
+            src="https://maps.google.com/maps?q=Rafi%20A%20Pets%2C%20Kagmari%20Rd%2C%20Tangail%201900&amp;z=15&amp;output=embed"
+            title="Map showing Rafi A Pets on Kagmari Road, Tangail"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <div class="map-card__foot">
+            <span><i class="fa-solid fa-map-pin"></i> Kagmari Rd, Tangail 1900</span>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Rafi+A+Pets,+Kagmari+Rd,+Tangail+1900" target="_blank" rel="noopener">Directions <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="form-card reveal" style="--d:80ms">
+          <h3>Send us a quick message</h3>
+          <p class="form-card__sub">Tell us what you're looking for and we'll reply on WhatsApp.</p>
+
+          <form class="form" id="enquiryForm">
+            <div class="form__row">
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" placeholder="e.g. Rafiul Islam" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" placeholder="01XXXXXXXXX" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="topic">I'm asking about</label>
+              <select id="topic" name="topic">
+                <option>Pet birds</option>
+                <option>Bird seed &amp; feed</option>
+                <option>Dog &amp; cat food</option>
+                <option>Aquarium &amp; fish</option>
+                <option>Cages &amp; accessories</option>
+                <option>Delivery / pick-up</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="What do you need? Include a brand or size if you know it."></textarea>
+            </div>
+
+            <button class="btn btn--primary" type="submit"><i class="fa-brands fa-whatsapp"></i> Send on WhatsApp</button>
+            <p class="form__note"><i class="fa-solid fa-lock"></i> This opens WhatsApp with your message ready to send. Nothing is stored on the website.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <span class="brand">
+          <span class="brand__mark"><i class="fa-solid fa-dove"></i></span>
+          <span class="brand__text">
+            <span class="brand__name">Rafi A Pets</span>
+            <span class="brand__tag">Pet Store · Tangail</span>
+          </span>
+        </span>
+        <p class="footer__blurb">
+          A 24-hour pet store on Kagmari Road, Tangail — birds, fish, food and
+          the everyday things that keep pets happy.
+        </p>
+        <div class="footer__social">
+          <a href="tel:+8801709518395" aria-label="Call Rafi A Pets"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://wa.me/8801709518395" target="_blank" rel="noopener" aria-label="WhatsApp Rafi A Pets"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Rafi+A+Pets+Kagmari+Rd+Tangail" target="_blank" rel="noopener" aria-label="Find Rafi A Pets on Google Maps"><i class="fa-solid fa-location-dot"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer__list">
+          <li><a href="#shop">Shop &amp; categories</a></li>
+          <li><a href="#about">About the store</a></li>
+          <li><a href="#birds">Our birds</a></li>
+          <li><a href="#how">How ordering works</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>What we stock</h4>
+        <ul class="footer__list">
+          <li><a href="#shop">Pet birds</a></li>
+          <li><a href="#shop">Bird seed &amp; feed</a></li>
+          <li><a href="#shop">Dog &amp; cat food</a></li>
+          <li><a href="#shop">Aquariums &amp; fish</a></li>
+          <li><a href="#shop">Cages &amp; accessories</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Find us</h4>
+        <ul class="footer__list">
+          <li><i class="fa-solid fa-location-dot" style="color:var(--amber);margin-right:8px"></i>Kagmari Rd, Tangail 1900</li>
+          <li><i class="fa-regular fa-clock" style="color:var(--amber);margin-right:8px"></i>Open 24 hours</li>
+          <li><a href="tel:+8801709518395"><i class="fa-solid fa-phone" style="color:var(--amber);margin-right:8px"></i>01709-518395</a></li>
+          <li style="margin-top:6px">
+            <a class="btn btn--amber btn--sm" href="#visit">Plan a visit <i class="fa-solid fa-arrow-right"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Rafi A Pets, Tangail. All rights reserved.</span>
+      <span>Website by <a href="../index.html">Sikder Touhid Shakib</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= Floating actions ================= -->
+<div class="floating">
+  <a class="fab fab--wa" href="https://wa.me/8801709518395?text=Hi%20Rafi%20A%20Pets%2C%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <button class="fab fab--top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Sticky header state ---------- */
+  var header = document.getElementById('siteHeader');
+  var toTop = document.getElementById('toTop');
+
+  function onScroll() {
+    var y = window.scrollY || window.pageYOffset;
+    header.classList.toggle('is-stuck', y > 8);
+    toTop.classList.toggle('is-visible', y > 700);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  toTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ---------- Mobile drawer ---------- */
+  var drawer = document.getElementById('drawer');
+  var toggle = document.getElementById('navToggle');
+  var closeBtn = document.getElementById('navClose');
+
+  function openDrawer() {
+    drawer.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    drawer.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  toggle.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  drawer.addEventListener('click', function (e) {
+    if (e.target === drawer) closeDrawer();
+  });
+  drawer.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', closeDrawer);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeDrawer();
+  });
+
+  /* ---------- Reveal on scroll ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  /* Open the first FAQ by default */
+  var firstFaq = document.querySelector('.faq__item');
+  if (firstFaq) {
+    firstFaq.classList.add('is-open');
+    firstFaq.querySelector('.faq__q').setAttribute('aria-expanded', 'true');
+    firstFaq.querySelector('.faq__a').style.maxHeight = firstFaq.querySelector('.faq__a').scrollHeight + 'px';
+    window.addEventListener('load', function () {
+      if (!firstFaq.classList.contains('is-open')) return;
+      var panel = firstFaq.querySelector('.faq__a');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    });
+  }
+
+  /* ---------- Active nav link ---------- */
+  var sections = document.querySelectorAll('main section[id]');
+  var navLinks = document.querySelectorAll('.nav__links a');
+  if ('IntersectionObserver' in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (link) {
+          link.classList.toggle('is-active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ---------- Enquiry form -> WhatsApp ---------- */
+  var form = document.getElementById('enquiryForm');
+  var WA_NUMBER = '8801709518395';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = form.elements['name'].value.trim();
+    var phone = form.elements['phone'].value.trim();
+    var topic = form.elements['topic'].value;
+    var message = form.elements['message'].value.trim();
+
+    if (!name || !phone) {
+      form.reportValidity();
+      return;
+    }
+
+    var text = 'Hello Rafi A Pets!%0A'
+      + 'Name: ' + encodeURIComponent(name) + '%0A'
+      + 'Phone: ' + encodeURIComponent(phone) + '%0A'
+      + 'About: ' + encodeURIComponent(topic) + '%0A'
+      + (message ? 'Message: ' + encodeURIComponent(message) : '');
+
+    window.open('https://wa.me/' + WA_NUMBER + '?text=' + text, '_blank', 'noopener');
+  });
+
+  /* ---------- Year ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+
+<!-- ================= Structured data ================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PetStore",
+  "name": "Rafi A Pets",
+  "description": "Pet store in Tangail, Bangladesh. Pet birds, aquarium fish, bird seed, dog and cat food, cages and accessories. Open 24 hours with in-store shopping, pick-up and local delivery.",
+  "image": "assets/shop-listing.jpg",
+  "url": "https://sikdershakib.github.io/uddogpoint/rafi-a-pets/",
+  "telephone": "+8801709518395",
+  "priceRange": "৳",
+  "currenciesAccepted": "BDT",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kagmari Rd",
+    "addressLocality": "Tangail",
+    "postalCode": "1900",
+    "addressCountry": "BD"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "2"
+  },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Rafi+A+Pets+Kagmari+Rd+Tangail",
+  "paymentAccepted": "Cash, Mobile financial services"
+}
+</script>
+</body>
+</html>
